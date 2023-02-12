@@ -1,0 +1,180 @@
+ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .wrapper {
+    background-color: gray;
+  }
+  .container {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .form {
+    position: relative;
+    height: 300px;
+    font-family: "OpenSans", sans-serif;
+    background-color: #232e39;
+    padding: 35px 20px;
+    color: rgba(220, 231, 243, 0.6);
+    text-align: center;
+  }
+  .form__choice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    .form__choice-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 20px;
+      height: 100%;
+      padding: 10px 0;
+      text-align: center;
+      background-color: rgba(220, 231, 243, 0.3);
+    }
+    .email {
+      margin-right: 5px;
+    }
+    .btn {
+      border: 2px solid #3E3EEB;
+      &:before {
+      content: '\2713';
+      display: block;
+      color: #fff;
+      margin-right: 3px; 
+    }
+   }
+  }
+  .form__mail, .form__password, .form__phone {
+    position: relative;
+  }
+  .form__input {
+    width: 250px;
+    background-color: #27323e;
+    outline: none;
+    border: 1px solid rgba(220, 231, 243, 0.6);
+    border-radius: 2px;
+    padding: 10px 20px 10px 12px;
+    color: rgba(220, 231, 243, 0.6);
+    font-size: 14px;
+    margin-bottom: 10px;
+    &:hover {
+      border: 1px solid rgb(220, 231, 243);
+      transition: .4s;
+    }
+  }
+  .form__input-label {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s;
+  }
+  .form__input-error {
+    display: none;
+  }
+  .form__password {
+    position: relative;
+  }
+  .password-control {
+    position: absolute;
+      top: 11px;
+      right: 17px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+  }
+  .fa-eye {
+    color: rgba(220, 231, 243, 0.6);
+    &:hover {
+      color: #1183ff;
+    }
+  }
+  .top {
+    font-size: 8px;
+    transition: 0.2s;
+    top: 10%;
+  }
+  .countries, .currencies {
+    height: 16px;
+    overflow: hidden;
+  }
+  .countries__header, .currencies__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      border: 7px solid transparent;
+      border-top: 7px solid rgba(220, 231, 243, 0.6);
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transition: .1s;
+    }
+  }
+  .active:after {
+      content: '';
+      display: inline-block;
+      border: 7px solid transparent;
+      border-bottom: 7px solid rgb(220, 231, 243);
+      position: absolute;
+      top: 0;
+      transition: .1s;
+   }
+  .form__input.countries {
+      position: absolute;
+      top: 51%;
+      z-index: 1500;
+  }
+  .form__input.currencies {
+      position: absolute;
+      top: 64%;
+      z-index: 1000;
+  }
+  .countries__list, .currencies__list {
+    height: 0;
+    transition: 0.3s; 
+    padding: 0;
+    margin: 0;
+  }
+  .countries__item, .currencies__item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px 0;
+    cursor: pointer;
+    &:hover {
+      color: rgb(220, 231, 243);
+    }
+    .countries__flag {
+      width: 25px;
+      margin-right: 10px;
+    }
+  }
+  .form__btn {
+    position: absolute;
+    top: 73%;
+    left: 25%;
+    border: none;
+    background: #3E3EEB;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 3px;
+  }
